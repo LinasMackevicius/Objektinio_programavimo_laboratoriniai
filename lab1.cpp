@@ -6,6 +6,14 @@
 
 using namespace std;
 
+
+class InfoPrinter
+{
+    virtual void printInfo();
+
+};
+
+
 class Time 
 {
 public:
@@ -18,7 +26,7 @@ public:
     int currentDay = (tPtr->tm_mday);
 };
 
-class Person : public Time
+class Person : public Time,InfoPrinter
 {
 private:
     string name;
